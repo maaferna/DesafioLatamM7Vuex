@@ -1,14 +1,13 @@
 <template>
-    <div>
-      <h2>Lista de juegos</h2>
-      <table class="table">
-        <thead>
+    <div class="container my-5">
+      <table class="table table-hover table-bordered table-striped align-middle">
+        <thead class="table-dark">
           <tr>
-            <th>Código</th>
-            <th>Nombre</th>
-            <th>Stock</th>
-            <th>Precio</th>
-            <th>Acciones</th>
+            <th scope="col" class="text-center">Código</th>
+            <th scope="col" class="text-center">Nombre</th>
+            <th scope="col" class="text-center">Stock</th>
+            <th scope="col" class="text-center">Precio</th>
+            <th scope="col" class="text-center">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -43,4 +42,10 @@
     }
   };
   </script>
+  
+  <style scoped>
+  .container {
+    max-width: 900px;
+  }
+  </style>
   

@@ -20,7 +20,12 @@ export default createStore({
     async fetchGames({ commit }) {
       try {
         const response = await axios.get('/juegos.json');
-        commit('setGames', response.data);
+        const gamesData = response.data.map(game => ({
+            ...game,
+            stock: Number(game.stock),   
+            precio: Number(game.precio)   
+        }));
+        commit('setGames', gamesData);
       } catch (error) {
         console.error("Error fetching games:", error);
       }
